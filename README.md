@@ -21,3 +21,42 @@ following reasons:
 The results thus obtained will be used by the management to understand what
 changes they should make to their workplace, in order to get most of their
 employees to stay.
+
+# Dataset
+
+The dataset used in this study can be found on
+[kaggle](https://www.kaggle.com/vjchoudhary7/hr-analytics-case-study) or here
+(inside the dataset folder).
+
+# Results
+
+The results can be found in the notebook, but, in summary, in this study it was
+possible to get a RandomForestClassifier (from sklearn) with 99 % accuracy, and
+99 % precision, 96 % recall and 97 % f1-score macro averages validated with a 30
+% split of the data.
+
+# Model
+
+The pre-trained model (trained with all the data) can be found under the model
+folder, wich can be loaded with `pickle` like:
+
+```python
+import pickle
+
+with open('./model/pretrained.pkl', 'rb') as f:
+    model = pickle.load(f)
+```
+
+# Replicate
+
+If you want to replicate the results you can by doing:
+
+    git clone https://github.com/saul44203/HR-Analytics-Case-Study
+
+and then executing the notebook provided inside the repository root with:
+
+    jupyter-notebook notebook.ipynb
+
+You can make sure you have all the necessary libraries first by doing:
+
+    pip install -r requeriments.txt
